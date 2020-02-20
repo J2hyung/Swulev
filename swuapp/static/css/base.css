@@ -1,0 +1,119 @@
+h1{
+    color: orange;
+}
+
+form.nav-bar input.search-query {
+    padding: 12px 48px 12px 16px;
+    width: 100%;
+    height: 48px;
+    line-height: 24px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 12px;
+    color: #292929;
+    font-size: 16px;
+    background-color: #f2f2f2;
+}
+
+div.section {
+    margin: 8px 8px 8px 8px;
+    padding: 24px 18px 12px 18px;
+    border: 1px solid #ededed;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+div.section select.semester-choice {
+    float: right;
+    display: inline-block; 
+}
+
+
+div.section div.mylectures span.lecture h3 {
+    padding: 12px 0;
+    margin: 0 72px 0 8px;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.section div.mylectures span.lecture {
+    position: relative;
+    display: block;
+    margin: 0 8px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+div.section div.mylectures span.lecture h3 span.name {
+    color: #292929;
+    font-size: 16px;
+}
+
+div.section div.mylectures span.lecture h3 span.professor {
+    margin-left: 8px;
+    color: #a6a6a6;
+    font-size: 12px;
+}
+
+div.section div.mylectures span.lecture button {
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    display: inline-block;
+    padding: 0 8px;
+    line-height: 24px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+div.section div.articles a{
+    text-decoration: none;
+}
+
+div.section div.articles a.article h3 {
+    margin-bottom: 4px;
+    line-height: 24px;
+    color: #292929;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.section div.articles a.article p.rate span {
+    display: block;
+    width: 60px;
+    height: 12px;
+    background: transparent url(/images/app.subject.rating.details.star.off.png) no-repeat left top;
+    background-size: 60px 12px;
+}
+div.section div.articles a.article p.info {
+    margin-bottom: 4px;
+    line-height: 20px;
+    font-size: 0;
+}
+
+div.section div.articles a.article p.text {
+    color: black;
+    font-size: 14px;
+}
+
+
+#mypagebt{
+    right: 55px !important;
+}
+
+div.lecture-detail , div.detail-article{
+    margin: 8px 8px 8px 8px;
+    padding: 24px 18px 12px 18px;
+    border: 1px solid #ededed;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+div.detail-article div.articles button {
+    float: right;
+    margin-left: 4px;
+}

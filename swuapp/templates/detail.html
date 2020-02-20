@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}detail{% endblock %}
+{% block content %}
+<div class="lecture-detail">
+      
+  <h2>바롬인성교육Ⅲ(종합설계프로젝트)</h2>
+  <p>
+    <label>교수명</label>
+    <span>고명희</span>
+  </p>
+  <p class="semesters">
+    <label>개설학기</label>
+    <span>2020-1, 2019-2, 2019-1, 2018-2, 2018-1, 2017-2, ...</span>
+  </p>
+</div>
+<div class="detail-article">
+  <h2>강의평</h2>
+  <div class="rating">
+    <div class="rate">
+      <span>
+        <span class="value">3.24</span>
+        <span class="quality-star">
+          <span class="on" style="width: 100%;"><!--별점별로 이미지 넣는 함수삽입--></span>
+        </span>
+        <span class="level-star">
+          <span class="on" style="width: 100%;"></span>
+        </span>
+      </span>
+      <hr>
+    </div>
+  </div>
+  <div class="articles">
+    <article>
+      
+      <button type="button" class="btn btn-sm btn-primary" id="detailbt">추천</button>
+      <button type="button" class="btn btn-sm btn-danger">신고</button>
+    
+      <p class="rate">
+        <span class="quality-star">
+          <span class="on" style="width: 100%;"><!--별점별로 이미지 넣는 함수삽입--></span>
+        </span>
+        <span class="level-star">
+          <span class="on" style="width: 100%;"></span>
+        </span>
+      </p>
+      <p class="info">
+        <span class="semester">19년 2학기 수강자</span>
+      </p>
+      <p class="text">팀원들을 잘만나서 편하게 했던 것 같아요</p>
+    </article>
+  </div>
+</div>
+{% endblock %}
