@@ -4,7 +4,7 @@ from .models import User
 # Create your views here.
 
 def login(request):
-    user1 = User.objects.raw('select * from swuapp_user')[1]
+    user1 = User.objects.all
     return render(request, 'login.html', {'user1':user1})
 
 def main(request):
