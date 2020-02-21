@@ -25,8 +25,7 @@
   <body>
 
     <div class="container">
-
-        <form class="form-signin">
+        <form class="form-signin" action="{% url 'login' %}">
           <h2 class="form-signin-heading">SWULEV</h2>
           <label for="inputId" class="sr-only">ID</label>
           <input type="id" id="ID" class="form-control" placeholder="ID" required autofocus>
@@ -42,7 +41,8 @@
     <footer class="footer">
         <div class="container">
             <p class="text-muted">develop by. swu babylions</p>
-             {{user1}}<br></div>
+             
+            {{user1}}<br></div>
     </footer>
     <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

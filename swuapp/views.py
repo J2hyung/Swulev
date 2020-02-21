@@ -1,14 +1,13 @@
-from django.shortcuts import render, get_object_or_404
-from .models import User 
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Lecture
 
 # Create your views here.
 
 def login(request):
-    user1 = User.objects.raw('select * from swuapp_user')[1]
+    user1 = Lecture.objects.raw('select * from swuapp_lecture')[0]
     return render(request, 'login.html', {'user1':user1})
 
 def main(request):
-
     return render(request, 'main.html')
 
 def detail(request):
