@@ -12,13 +12,14 @@ class UserLecture(models.Model):
         ('off', 'off'),
     )
 
-    User = models.ForeignKey('swuapp.User', on_delete=models.CASCADE, related_name='myuserid', unique=True,primary_key=True)
-    mylectureid = models.ForeignKey('swuapp.Lecture', to_field='lectureid', on_delete=models.CASCADE, related_name='mylectureid')
-    mysemester = models.ForeignKey('swuapp.Lecture', to_field='semester',on_delete=models.CASCADE, related_name='mysemester')
+    myuserid = models.ForeignKey('User', on_delete=models.CASCADE, related_name='myuserid', unique=True,primary_key=True)
+    mylectureid = models.ForeignKey('Lecture', on_delete=models.CASCADE, related_name='mylectureid')
+    mysemester = models.ForeignKey('Lecture', on_delete=models.CASCADE, related_name='mysemester')
     rating = models.CharField(max_length=10, choices=RATING_FIELD, default = "off")
+
 
 class Lecture(models.Model):
     lectureid = models.CharField(max_length=20, primary_key=True)
     lecturename = models.CharField(max_length=30)
     professor = models.CharField(max_length=20)
-    semester = models.CharField(max_length = 30, unique=True)
+    semester = models.CharField(max_length = 30)

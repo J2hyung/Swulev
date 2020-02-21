@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404
+from .models import User 
 
 # Create your views here.
 
 def login(request):
-
-    return render(request, 'login.html')
+    user1 = User.objects.raw('select * from swuapp_user')[1]
+    return render(request, 'login.html', {'user1':user1})
 
 def main(request):
 
