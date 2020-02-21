@@ -25,7 +25,8 @@
   <body>
 
     <div class="container">
-        <form class="form-signin">
+        <form class="form-signin" method="POST" action="{% main %}">
+          {% csrf_token %}
           <h2 class="form-signin-heading">SWULEV</h2>
           <label for="inputId" class="sr-only">ID</label>
           <input type="id" id="ID" class="form-control" placeholder="ID" required autofocus>
