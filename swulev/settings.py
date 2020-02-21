@@ -1,5 +1,4 @@
 import os
-# 지민 : mysql을 사용하기 위한 추가 모듈
 import pymysql
 pymysql.install_as_MySQLdb()
 
