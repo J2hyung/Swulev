@@ -1,6 +1,7 @@
 import os
-import pymysql
-pymysql.install_as_MySQLdb()
+import os, pymysql
+pymysql.install_as_MySQLdb() #mysql을 사용하기 위한 커넥터 
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -68,11 +69,22 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'swulev',
+<<<<<<< HEAD
         'USER' : 'swulev',
         'PASSWORD' : 'likelion1234',
         'HOST' : 'swulev.chkailloujbx.ap-northeast-2.rds.amazonaws.com',
         'PORT' : '3306',
+=======
+        'USER': 'swulev',
+        'PASSWORD': 'likelion1234',
+        'HOST': 'swulev.chkailloujbx.ap-northeast-2.rds.amazonaws.com',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        },
+>>>>>>> 893b35e3e6cd993fc0e7d78bbfc914a9c6870c96
     }
+    
 }
 
 
