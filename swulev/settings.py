@@ -1,5 +1,6 @@
 import os
 import os, pymysql
+pymysql.version_info = (1, 3, 13, "final", 0)
 pymysql.install_as_MySQLdb() #mysql을 사용하기 위한 커넥터 
 
 
