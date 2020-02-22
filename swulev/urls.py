@@ -6,6 +6,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', login, name='login'),
     path('main/', main, name='main'),
-    path('detail/', detail, name='detail'),
+    path('detail/<current_lectureid>/', detail, name='detail'),
     path('mypage/', mypage, name='mypage'),
 ]

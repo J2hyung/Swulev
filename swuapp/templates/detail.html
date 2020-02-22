@@ -50,4 +50,28 @@
     </article>
   </div>
 </div>
+
+<!--/////////////////////////////////////////////////////////////////////////-->
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{current_lecture.lecturename}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{current_lecture.professor}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{current_lecture.semester}}</h6>
+    <p class="card-text">강의평</p>
+    {% for b in boards %}
+      <div class="card">
+        <div class="card-body">
+          {{b.qualityscore}}
+          <hr>
+          {{b.difficultyscore}}
+          <hr>
+          {{b.text}}
+        </div>
+      </div>
+    {% endfor %}
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
 {% endblock %}

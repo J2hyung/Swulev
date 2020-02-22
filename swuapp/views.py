@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 #from .models import Lecture
-from .models import User
+from .models import *
 # Create your views here.
 
 def login(request):
@@ -22,9 +22,12 @@ def login(request):
 def main(request):
     return render(request, 'main.html')
 
-def detail(request):
+def detail(request, current_lectureid):
 
-    return render(request, 'detail.html')
+    current_lecture = get_object_or_404(Lecture, lectureid=current_lectureid)
+    boards = Board.objects.filter(b_lectureid = current_lectureid)
+
+    return render(request, 'detail.html', {'current_lecture' : current_lecture, 'boards': boards})
 
 def mypage(request):
     return render(request, 'mypage.html')
