@@ -11,28 +11,23 @@
     <option>2018-2</option>
     <option>2018-1</option>
   </select>
-  
-  <h1>git test</h1>
-  <h1>git test 222</h1>
-  <h2>내가 들은 수업</h2>
+
   <!--{{ my_lectures }}-->
-  <!-- 이런 식으로 내 강의들 불러오기! -->
   <div class="mylectures">
     <span class="lecture">
-      <h3> <!-- 여기도 태그 안에 함수써서 내용가져오기 -->
-        <span class="name">시스템보안과운영실습</span>
-        <span class="professor">호준원</span>
-      </h3>
-      <button type="button" class="btn btn-sm" disabled="disabled">평가 완료</button>
-    </span>
-    <span class="lecture">
-      <h3>
-        <span class="name">현대암호학기초</span>
-        <span class="professor">천지영</span>
-      </h3>
-      <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal" >평가하기</button>
+      <h3> 내가 들은 과목 </h3>
+        <ul class="list-group list-group-flush">
+          {% for list in mylecture_list %}
+          <li class="list-group-item">
+            <span class="name">{{ list.lecturename }}</span>
+            <span class="professor">{{ list.professor }}</span>
+            <button type="button" class="btn btn-sm" disabled="disabled">평가 완료</button>
+          </li>
+          {% endfor %}
+        </ul>
     </span>
   </div>
+  
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
