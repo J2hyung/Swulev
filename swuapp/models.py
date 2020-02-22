@@ -2,7 +2,7 @@ from django.db import models
 
 
 class User(models.Model):
-    userid = models.CharField(max_length = 20,primary_key=True,unique=True, null=False)
+    userid = models.CharField(max_length = 20, primary_key=True, unique=True, null=False)
     userpw = models.CharField(max_length = 30)
 
 class UserLecture(models.Model):

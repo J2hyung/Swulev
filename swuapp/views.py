@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-#from .models import Lecture
+from .models import Lecture
 from .models import User
 # Create your views here.
 
@@ -20,7 +20,8 @@ def login(request):
     # return render(request, 'login.html', {'user1':user1})
 
 def main(request):
-    return render(request, 'main.html')
+    mylecture_list = Lecture.objects.filter(lectureid__startswith="VD04013")
+    return render(request, 'main.html', {"mylecture_list": mylecture_list})
 
 def detail(request):
 
